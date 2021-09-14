@@ -130,3 +130,18 @@ Objects $(GAME_NAMES:S=.cpp) ;
 
 LOCATE_TARGET = dist ; #put main in 'dist' directory
 MainFromObjects game : $(GAME_NAMES:S=$(SUFOBJ)) ;
+
+PIPELINE_NAMES =
+	preprocessor
+	PlayMode
+	PPU466
+	load_save_png
+	gl_compile_program
+	Load
+	data_path
+	Mode
+	GL
+	;
+
+Objects $(PIPELINE_NAMES:S=.cpp) ;
+MainFromObjects preprocessor : $(PIPELINE_NAMES:S=$(SUFOBJ)) ;

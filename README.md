@@ -1,8 +1,8 @@
-# (TODO: your game's title)
+# Orbit Throbbing Star
 
-Author: (TODO: your name)
+Author: Hao Chen
 
-Design: (TODO: In two sentences or fewer, describe what is new and interesting about your game.)
+Design: Try to orbit around the star with your limited engine. Do not crash!
 
 Screen Shot:
 
@@ -10,13 +10,20 @@ Screen Shot:
 
 How Your Asset Pipeline Works:
 
-(TODO: describe the steps in your asset pipeline, from source files to tiles/backgrounds/whatever you upload to the PPU466.)
+1. Draw assets with pad/ process image to usable assets
+2. Export assets to project manually in a portable format
+3. Use preprocessor to convert assets to runtime usable binary bytes leveraging png libraries provided  
+  ** You need to run it manually! It will be built under dist folder **
+4. In runtime, load bytes into memory directly
 
 How To Play:
 
-(TODO: describe the controls and (if needed) goals/strategy.)
+- Use your arrow keys to accelerate your spaceship orbiting the star to explore it.
+- The star's gravity field is changing.
+- Your engine has limited power. Be careful.
 
-Sources: (TODO: list a source URL for any assets you did not create yourself. Make sure you have a license for the asset.)
+Sources: 
+- The planet assets are created based on the picture from NASA Earth Observatory [Twin Blue Marbles](https://earthobservatory.nasa.gov/images/8108/twin-blue-marbles) in public domain
 
 This game was built with [NEST](NEST.md).
 

@@ -17,6 +17,11 @@ struct PlayMode : Mode {
 
 	//----- game state -----
 
+	float gravity = 30.f;
+	const float accl_rate = 3.f;
+	glm::vec2 speed = {0.f, 0.f};
+	glm::vec2 accl = {0.f, 0.f};
+
 	//input tracking:
 	struct Button {
 		uint8_t downs = 0;
